@@ -1,0 +1,98 @@
+---
+title: "Rust Basics for Beginners"
+date: "2025-08-05"
+tags: ["rust", "learning", "basics"]
+draft: false
+summary: "A beginner-friendly guide to understanding basic Rust concepts using real examples."
+---
+
+# 🚀 Rust Basics for Beginners
+
+Welcome to your Rust journey! This guide walks you through the core concepts of Rust using simple, real-life code examples. Ideal for those just starting out, we'll explore `struct`, `enum`, and `match` in a hands-on way.
+
+---
+
+## 📦 Structs: Grouping Related Data
+
+A `struct` lets you group related values into one custom type. Here's a basic example:
+
+```rust
+struct Car {
+    brand: String,
+    year: u32,
+}
+
+impl Car {
+    fn honk(&self) {
+        println!("{} says Beep Beep!", self.brand);
+    }
+}
+
+fn main() {
+    let my_car = Car {
+        brand: String::from("Toyota"),
+        year: 2020,
+    };
+
+    println!("My car is a {} made in {}", my_car.brand, my_car.year);
+    my_car.honk();
+}
+```
+
+### ✅ Output:
+```
+My car is a Toyota made in 2020
+Toyota says Beep Beep!
+```
+
+---
+
+## 🔁 Enums: Choosing One Variant from Many
+
+Enums are useful when a value can be one of a few different kinds:
+
+```rust
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter,
+}
+
+fn value_in_cents(coin: Coin) -> u8 {
+    match coin {
+        Coin::Penny => 1,
+        Coin::Nickel => 5,
+        Coin::Dime => 10,
+        Coin::Quarter => 25,
+    }
+}
+
+fn main() {
+    let coin = Coin::Dime;
+    println!("The coin is worth {} cents.", value_in_cents(coin));
+
+    let another = Coin::Quarter;
+    println!("Another coin is worth {} cents.", value_in_cents(another));
+}
+```
+
+### ✅ Output:
+```
+The coin is worth 10 cents.
+Another coin is worth 25 cents.
+```
+
+---
+
+## 💡 Recap
+
+- `struct` is for grouping related data.
+- `enum` is for defining a type that can be one of many forms.
+- `match` is used to compare values and take actions.
+
+You're now on your way to mastering Rust step by step. Keep practicing!
+
+---
+
+Would you like to explore `Option`, `Result`, or ownership/borrowing next?

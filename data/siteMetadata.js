@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'truthixify',
-  author: 'truthixify',
-  headerTitle: 'truthxify',
+  title: 'Tripp',
+  author: 'Tripp',
+  headerTitle: 'Tripp',
   // description: 'A blog created with Next.js and Tailwind.css',
   description:
     'This blog contains what I’m learning about cryptography and distributed systems, experiments, and thoughts from my journey through the decentralized world.',
